@@ -1,7 +1,8 @@
-import { Layout } from "antd"
+import { Layout, Space } from "antd"
 import { Navbar, Home, Exchanges, CryptoDetails, News, Cryptocurrencies } from './components'
 import './App.css'
-import { Route, Routes } from "react-router-dom"
+import { Link, Route, Routes } from "react-router-dom"
+import Typography from "antd/es/typography/Typography"
 
 function App() {
 
@@ -23,8 +24,18 @@ function App() {
               </Routes>
             </div>
           </Layout>
+          <div className="footer">
+            <Typography.Title level={5} style={{ color: 'white' }}>
+              Cryptoverse <br />
+              All rights reserved
+            </Typography.Title>
+            <Space>
+              <Link to='/'>Home</Link>
+              <Link to='/exchanges'>Exchanges</Link>
+              <Link to='/news'>News</Link>
+            </Space>
+          </div>
         </div>
-        <div className="footer"></div>
       </div>
     </>
   )
