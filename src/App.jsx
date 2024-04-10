@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Layout } from "antd"
+import { Navbar } from './components'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <p>Initial setup</p>
+      <div className="app">
+        <div className="navbar">
+          <Navbar />
+        </div>
+        <div className="main"></div>
+        <div className="footer"></div>
+      </div>
     </>
   )
 }
