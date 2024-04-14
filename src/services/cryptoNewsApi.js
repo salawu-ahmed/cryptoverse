@@ -11,11 +11,11 @@ const createRequest = (url) => ({ url, headers: cryptoNewsHeaders})
 const cryptoNewsApi = createApi({
     reducerPath: "cryptoNewsApi",
     baseQuery: fetchBaseQuery({ baseUrl: ""}),
-    endpoints: (builder) => {
+    endpoints: (builder) => ({
         getCryptoNews: builder.query({
             query: ({newsCategories, count}) => createRequest(`news/search?q=${newsCategory}&safeSearch=off&textFormat=Raw&freshness=Day&count=${count}`)
     })
-    }
+    })
 })
 
 export const { useGetCryptoNewsQuery } = cryptoNewsApi
